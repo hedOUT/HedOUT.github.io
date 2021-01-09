@@ -89,7 +89,7 @@
     height:auto;
     padding-top:8rem;
     padding-bottom:8rem;
-    background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.jpg);
+    background:linear-gradient(90deg,rgba(255,255,255,.1) 0,rgba(255,255,255,.1) 100%),url(../img/bg-masthead.png);
     background-position:center center;
     background-repeat:no-repeat;
     background-size:cover
@@ -103,7 +103,7 @@
   
   @media (min-width:992px){
     .masthead{
-      height:100vh
+      height:100vh;
     }
     
     .masthead h1{
@@ -343,8 +343,8 @@
   }
 
   .btn-secondary{
-    background-color:#ecb807!important;
-    border-color:#ecb807!important;
+    background-color:#768D64!important;
+    border-color:#768D64!important;
     color:#E7F8DB!important
   }
 
@@ -371,5 +371,5 @@
   }
 
   .text-secondary{
-    color:#ecb807!important
+    color:#768D64!important
   }
