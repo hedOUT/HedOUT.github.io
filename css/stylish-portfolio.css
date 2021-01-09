@@ -139,13 +139,13 @@ h6 {
 .sidebar-nav li.sidebar-nav-item a {
   display: block;
   text-decoration: none;
-  color: #fff;
+  color: #E7F8DB;
   padding: 15px;
 }
 
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #E7F8DB;
   background: rgba(255, 255, 255, 0.2);
 }
 
@@ -165,11 +165,11 @@ h6 {
 }
 
 .sidebar-nav > .sidebar-brand a {
-  color: #fff;
+  color: #E7F8DB;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: #E7F8DB;
   background: none;
 }
 
@@ -186,14 +186,14 @@ h6 {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #fff;
+  color: #E7F8DB;
   background: rgba(52, 58, 64, 0.5);
   line-height: 50px;
   z-index: 999;
 }
 
 .menu-toggle:focus, .menu-toggle:hover {
-  color: #fff;
+  color: #E7F8DB;
 }
 
 .menu-toggle:hover {
@@ -201,7 +201,7 @@ h6 {
 }
 
 .service-icon {
-  background-color: #fff;
+  background-color: #E7F8DB;
   color: #768D64;
   height: 7rem;
   width: 7rem;
@@ -246,7 +246,7 @@ h6 {
 }
 
 .portfolio-item .caption .caption-content {
-  color: #fff;
+  color: #E7F8DB;
   margin: auto 2rem 2rem;
 }
 
@@ -334,7 +334,7 @@ a:hover, a:focus, a:active {
 .btn-primary {
   background-color: #768D64 !important;
   border-color: #768D64 !important;
-  color: #fff !important;
+  color: #E7F8DB !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
@@ -345,7 +345,7 @@ a:hover, a:focus, a:active {
 .btn-secondary {
   background-color: #ecb807 !important;
   border-color: #ecb807 !important;
-  color: #fff !important;
+  color: #E7F8DB !important;
 }
 
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
@@ -354,7 +354,7 @@ a:hover, a:focus, a:active {
 }
 
 .btn-dark {
-  color: #fff !important;
+  color: #E7F8DB !important;
 }
 
 .btn {

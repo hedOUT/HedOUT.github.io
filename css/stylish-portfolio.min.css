@@ -63,14 +63,14 @@
     width:50px;
     height:50px;
     text-align:center;
-    color:#fff;
+    color:#E7F8DB;
     background:rgba(52,58,64,.5);
     line-height:45px
   }
   
   .scroll-to-top:focus,
   .scroll-to-top:hover{
-    color:#fff
+    color:#E7F8DB
   }
   
   .scroll-to-top:hover{
@@ -135,13 +135,13 @@
   .sidebar-nav li.sidebar-nav-item a{
     display:block;
     text-decoration:none;
-    color:#fff;
+    color:#E7F8DB;
     padding:15px
   }
 
   .sidebar-nav li a:hover{
     text-decoration:none;
-    color:#fff;
+    color:#E7F8DB;
     background:rgba(255,255,255,.2)
   }
 
@@ -160,11 +160,11 @@
   }
 
   .sidebar-nav>.sidebar-brand a{
-    color:#fff
+    color:#E7F8DB
   }
 
   .sidebar-nav>.sidebar-brand a:hover{
-    color:#fff;
+    color:#E7F8DB;
     background:0 0
   }
   #sidebar-wrapper.active{ 
@@ -180,7 +180,7 @@
     width:50px;
     height:50px;
     text-align:center;
-    color:#fff;
+    color:#E7F8DB;
     background:rgba(52,58,64,.5);
     line-height:50px;
     z-index:999
@@ -188,7 +188,7 @@
 
   .menu-toggle:focus,
   .menu-toggle:hover{
-    color:#fff
+    color:#E7F8DB
   }
 
   .menu-toggle:hover{
@@ -196,7 +196,7 @@
   }
 
   .service-icon{
-    background-color:#fff;
+    background-color:#E7F8DB;
     color:#768D64;
     height:7rem;
     width:7rem;
@@ -241,7 +241,7 @@
   }
 
   .portfolio-item .caption .caption-content{
-    color:#fff;
+    color:#E7F8DB;
     margin:auto 2rem 2rem
   }
 
@@ -334,7 +334,7 @@
   .btn-primary{
     background-color:#768D64!important;
     border-color:#768D64!important;
-    color:#fff!important
+    color:#E7F8DB!important
   }
 
   .btn-primary:active,.btn-primary:focus,.btn-primary:hover{
@@ -345,7 +345,7 @@
   .btn-secondary{
     background-color:#ecb807!important;
     border-color:#ecb807!important;
-    color:#fff!important
+    color:#E7F8DB!important
   }
 
   .btn-secondary:active,.btn-secondary:focus,.btn-secondary:hover{
@@ -354,7 +354,7 @@
   }
 
   .btn-dark{
-    color:#fff!important
+    color:#E7F8DB!important
   }
 
   .btn{
