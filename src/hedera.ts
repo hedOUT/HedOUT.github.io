@@ -1,6 +1,6 @@
 import hash from "hash-sdk";
 
- 
+
 interface TopicUpdateData {
     topicId: string;
     memo?: string;
