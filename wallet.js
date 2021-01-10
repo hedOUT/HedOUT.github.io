@@ -1,4 +1,5 @@
 const { Client, PrivateKey, AccountCreateTransaction, AccountBalanceQuery, Hbar, TransferTransaction} = require("@hashgraph/sdk");
+const { create } = require("browser-sync");
 require("dotenv").config();
 
 /////////////////////
@@ -25,13 +26,30 @@ client.setOperator(myAccountId, myPrivateKey);
 // CONNECT TO HEDERA DONE
 ///////////////////////////
 
-// players
+
+// players for mocking 
 const player1 = {
-    id: "0.0.221531",
+    id: "0.0.222772",//"0.0.221531",
+    privateKey: "302e020100300506032b65700422042082ba57e7e71d5a50381b0e7bb09c1fc811d65f8667ebd0cf5204ed02f23d4ba0",
+    publicKey: "302a300506032b6570032100c541045da8f65de030644c60896c663df4f4fd58e3279384fa7f81b1739a8caa",
 }
 const player2 = {
-    id: "0.0.221532",
+    id: "0.0.222773",//"0.0.221532",
+    privateKey: "302e020100300506032b657004220420c0f38294900113598e492172c0c214d449f34069ea69bb4a90a41221c3d061ea",
+    publicKey: "302a300506032b65700321003afec291cf9c35139769b5ae43a9151a26d057b49a272ac6ba78e17ee9144991",
 }
+
+/* 
+output
+private key: 302e020100300506032b65700422042082ba57e7e71d5a50381b0e7bb09c1fc811d65f8667ebd0cf5204ed02f23d4ba0
+public key: 302a300506032b6570032100c541045da8f65de030644c60896c663df4f4fd58e3279384fa7f81b1739a8caa
+private key: 302e020100300506032b657004220420c0f38294900113598e492172c0c214d449f34069ea69bb4a90a41221c3d061ea
+public key: 302a300506032b65700321003afec291cf9c35139769b5ae43a9151a26d057b49a272ac6ba78e17ee9144991
+The new account ID is: 0.0.222772
+The new account ID is: 0.0.222773
+The new account balance is: 1000 tinybar.
+The new account balance is: 1000 tinybar.
+*/
 
 // set timer
 function startTimer() {
@@ -46,6 +64,9 @@ async function createAccount() {
     //Create new keys
     const newAccountPrivateKey = await PrivateKey.generate(); 
     const newAccountPublicKey = newAccountPrivateKey.publicKey;
+
+    console.log('private key: ' + newAccountPrivateKey);
+    console.log('public key: ' + newAccountPublicKey);
 
     //Create a new account with 1,000 tinybar starting balance
     const newAccountTransactionResponse = await new AccountCreateTransaction()
@@ -66,7 +87,7 @@ async function createAccount() {
 
     console.log("The new account balance is: " +accountBalance.hbars.toTinybars() +" tinybar.");
 
-    return newAccountIdl;
+    return newAccountId;
 
 }
 
@@ -80,26 +101,30 @@ async function getBalance(id) {
 }
 
 
-async function transaction(fromID, toID, amount) {
+async function transaction(from, to, amount) {
     // balance check
-    getBalance(fromID);
-    getBalance(toID);
+    getBalance(from.id);
+    getBalance(to.id);
 
     //Create the transfer transaction
-    const transferTransactionResponse = await new TransferTransaction()
-    .addHbarTransfer(fromID, Hbar.fromTinybars(0 - amount))
-    .addHbarTransfer(toID, Hbar.fromTinybars(amount))
-    .execute(client);
-
+    const transferTransaction = await new TransferTransaction()
+        .addHbarTransfer(from.id, Hbar.fromTinybars(0 - amount))
+        .addHbarTransfer(to.id, Hbar.fromTinybars(amount))
+        .freezeWith(client)
+        .sign(PrivateKey.fromString(from.privateKey));
+    
+    // sign with private key of fromID user
+    const signedTransaction = await transferTransaction
+        .execute(client);     
+    
     //Verify the transaction status
-    const transactionReceipt = await transferTransactionResponse.getReceipt(client);
+    const transactionReceipt = await signedTransaction.getReceipt(client);
     console.log("The transfer transaction from my account to the new account was: " + transactionReceipt.status.toString());
 
     // balance check
-    getBalance(fromID);
-    getBalance(toID);
+    getBalance(from.id);
+    getBalance(to.id);
 }
 
-
 // try a transaction
-transaction(myAccountId, player1.id, 500);
+transaction(player2, player1, 500);
