@@ -1,10 +1,11 @@
 const { Client, PrivateKey, AccountCreateTransaction, AccountBalanceQuery, Hbar, TransferTransaction} = require("@hashgraph/sdk");
-const { create } = require("browser-sync");
+//const { create } = require("browser-sync");
 require("dotenv").config();
 
 /////////////////////
 // CONNECT TO HEDERA
 /////////////////////
+
 
 // get ID and private key from .env file
 const myAccountId = process.env.MY_ACCOUNT_ID;
@@ -52,10 +53,10 @@ The new account balance is: 1000 tinybar.
 */
 
 // set timer
+
 function startTimer() {
     console.log('timer started');
 }
-
 
 // create an account and return the account id
 // we dont need this because every time we run the code a new account is created and saved forever in the hedera (test) database
@@ -127,4 +128,12 @@ async function transaction(from, to, amount) {
 }
 
 // try a transaction
-transaction(player2, player1, 500);
+//transaction(player2, player1, 500);
+
+
+module.exports = {
+    startTimer,
+    createAccount,
+    getBalance,
+    transaction,
+}

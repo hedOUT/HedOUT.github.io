@@ -13,6 +13,20 @@ const rename = require("gulp-rename");
 const sass = require("gulp-sass");
 const uglify = require("gulp-uglify");
 
+var browserify = require('browserify');
+
+/*
+gulp.task('libs', function () {
+  console.log('here');
+  return browserify()
+    .require('@hashgraph/proto')
+    .require('@hashgraph/sdk')
+    .bundle()
+    .pipe(source('libs.js'))
+    .pipe(gulp.dest('./build/'));
+});
+*/
+
 // Load package.json for banner
 const pkg = require('./package.json');
 
