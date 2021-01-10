@@ -96,6 +96,7 @@
   }
   
   .masthead h1{
+    color: white;
     font-size:4rem;
     margin:0;
     padding:0
@@ -107,6 +108,7 @@
     }
     
     .masthead h1{
+      color: white;
       font-size:5.5rem
     }
   }
