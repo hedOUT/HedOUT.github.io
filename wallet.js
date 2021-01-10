@@ -131,7 +131,8 @@ async function transaction(from, to, amount) {
     getBalance(to.id);
 }
 
-// try a transaction
+// try a transaction!
+// transaction(from, to, amount[in tinybars])
 transaction(player2, player1, 500);
 
 
