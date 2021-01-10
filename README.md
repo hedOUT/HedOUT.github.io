@@ -42,7 +42,7 @@ Communication, Time management and teamwork are instrumental to the completion o
 
 After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.  
   
-Run node wallet.js to try a transaction in the terminal. Be careful it is possible to run out of currency!
+Run `node wallet.js` to try a transaction in the terminal. Be careful it is possible to run out of currency!
 
 #### Gulp Tasks
 
