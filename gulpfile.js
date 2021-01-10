@@ -15,7 +15,7 @@ const uglify = require("gulp-uglify");
 
 var browserify = require('browserify');
 
-/*
+
 gulp.task('libs', function () {
   console.log('here');
   return browserify()
@@ -25,7 +25,7 @@ gulp.task('libs', function () {
     .pipe(source('libs.js'))
     .pipe(gulp.dest('./build/'));
 });
-*/
+
 
 // Load package.json for banner
 const pkg = require('./package.json');

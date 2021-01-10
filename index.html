@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -239,7 +238,8 @@
             </p>
   
             <!-- <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Added more</a> -->
-            <a onclick="getBalance('0.0.222772')" class="btn btn-s btn-light mr-4">Add Value</a>
+            <a id="addvalue" onclick="getBalance('0.0.222772')" class="btn btn-s btn-light mr-4">Add Value</a>
+            <script src="bundle.js"></script>
             <a class="btn btn-s btn-light mr-4", href="https://humankind.ly/"> Donate To</a>
           </div>
         </div>
@@ -326,9 +326,16 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <script src="./bundle.js"></script>
-  <script src="./module.js"></script>
-  <script src="./wallet.js"></script>
+  
+  <script>
+    window.onload = function() {
+      console.log("this is runnign");
+      startTimer();
+      getBalance('0.0.222772');
+      
+    }
+  </script>
+  <script type="text/javascript" src="bundle.js"></script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
