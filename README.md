@@ -1,8 +1,11 @@
 ## Let’s HedOUT and get ahead!
 Social goal setting app that creates accountability, motivation and connectedness within international friend circles using Hedera Hashgraph.  
    
-Visit us at: https://hedout.github.io/#       
-From SheHacks2021
+Visit the website: https://hedout.github.io/
+
+## Demo 
+[![Watch the video](img/web-preview.png)](https://www.youtube.com/watch?v=yttYT2QplwM&feature=emb_title)
+
 
 ### Idea
 Gamification of hitting goals by harnessing the power of social groups and raising the stakes with cryptocurrency.
@@ -53,3 +56,6 @@ Run `node wallet.js` to try a transaction in the terminal. Be careful it is poss
 * `gulp vendor` copies dependencies from node_modules to the vendor directory
 
 You must have npm installed globally in order to use this build environment.
+
+Devpost: https://devpost.com/software/hedout?ref_content=user-portfolio&ref_feature=in_progress
+
