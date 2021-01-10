@@ -87,8 +87,8 @@ async function transaction(fromID, toID, amount) {
 
     //Create the transfer transaction
     const transferTransactionResponse = await new TransferTransaction()
-    .addHbarTransfer(toID, Hbar.fromTinybars(0 - amount))
-    .addHbarTransfer(fromID, Hbar.fromTinybars(amount))
+    .addHbarTransfer(fromID, Hbar.fromTinybars(0 - amount))
+    .addHbarTransfer(toID, Hbar.fromTinybars(amount))
     .execute(client);
 
     //Verify the transaction status
