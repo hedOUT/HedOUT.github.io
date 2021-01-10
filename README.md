@@ -1,11 +1,11 @@
 ## Let’s HedOUT and get ahead!
 Social goal setting app that creates accountability, motivation and connectedness within international friend circles using Hedera Hashgraph.  
-   
-Visit the website: https://hedout.github.io/
 
-## Demo 
+## Demo Video
 [![Watch the video](img/web-preview.png)](https://www.youtube.com/watch?v=yttYT2QplwM&feature=emb_title)
 
+ 
+Visit the website: https://hedout.github.io/
 
 ### Idea
 Gamification of hitting goals by harnessing the power of social groups and raising the stakes with cryptocurrency.
