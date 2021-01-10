@@ -1,5 +1,6 @@
 ## Let’s HedOUT and get ahead!
 Social goal setting app that creates accountability, motivation and connectedness with in international friend circles using Hedera Hashgraph.  
+   
 Visit us at: https://hedout.github.io/#       
 From SheHacks2021
 
